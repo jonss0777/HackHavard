@@ -1,2 +1,2 @@
 # HackHavard
-Idea:
+Modified the read me!
