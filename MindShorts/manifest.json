@@ -2,14 +2,15 @@
     "manifest_version": 3,
     "name": "YouTube Shorts Content Analyzer",
     "version": "1.0",
-    "description": "Analyzes YouTube Shorts content and displays suitability overlay",
+    "description": "Chrome extension that analyzes YouTube Shorts content and displays suitability overlay",
     "permissions": [
       "activeTab",
       "storage"
     ],
     "host_permissions": [
       "https://www.youtube.com/*",
-      "https://api.openai.com/*"
+      "https://api.openai.com/*",
+      "https://www.googleapis.com/*"
     ],
     "background": {
       "service_worker": "background.js"
@@ -17,8 +18,7 @@
     "content_scripts": [
       {
         "matches": ["https://www.youtube.com/*"],
-        "js": ["contentScript.js"],
-        "css": ["styles.css"]
+        "js": ["contentScript.js"]
       }
     ]
   }
